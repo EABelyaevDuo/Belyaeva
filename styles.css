@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #121212;
+  color: #f3f3f3;
+  line-height: 1.6;
+}
+
+.header {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  min-height: 350px;
+  background: url('images/main-header.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(20, 20, 20, 0.5);
+}
+
+.header-title {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-shadow: 0 4px 32px rgba(0,0,0,0.5);
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background: #181818;
+  padding: 18px 0;
+  margin-bottom: 40px;
+}
+
+nav a {
+  color: #ebf0f5;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: color 0.3s;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+nav a:hover,
+nav a.active {
+  color: #fff;
+  background: #007bff;
+}
+
+.section {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: rgba(30,30,30,0.8);
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+}
+
+.bio-photo {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 2.1rem;
+  margin-top: 0;
+  color: #ebf0f5;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+
+.gallery-grid img {
+  width: 220px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+}
+
+@media (max-width: 700px) {
+  .header-title { font-size: 2.1rem; }
+  .gallery-grid img { width: 100%; height: auto; }
+}
+.social-link {
+  display: inline-block; /* Позволяет устанавливать ширину, высоту и отступы, сохраняя строку */
+  margin: 0 12px;       /* Отступы между иконками */
+  transition: transform 0.3s ease; /* Плавная анимация при наведении */
+}
+
+.social-link:hover {
+  transform: scale(1.2); /* Увеличение иконки при наведении */
+}
+
+.social-icon {
+  width: 36px;   /* Задай желаемый размер иконок */
+  height: 36px;  /* Задай желаемый размер иконок */
+  vertical-align: middle; /* Выравнивает иконки по центру по вертикали */
+  filter: brightness(0) invert(1);
+  /* Если твои PNG иконки уже имеют нужный цвет, тебе не нужно использовать CSS-фильтр invert() */
+  /* filter: invert(90%) sepia(10%) saturate(500%) hue-rotate(180deg) brightness(110%) contrast(90%); */
+}
