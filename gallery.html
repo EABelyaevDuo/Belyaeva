@@ -3,12 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <title>Gallery — Belyaeva Alena</title>
-  <!-- Подключение локального CSS Lightbox -->
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+  <!-- Подключение CSS Lightbox через CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
   <!-- Подключение твоих стилей -->
   <link rel="stylesheet" href="styles.css" />
-  <!-- Если хочешь, позже подключишь шрифты Google -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" /> -->
+  <style>
+    /* Класс для скрытия ссылок, но чтобы они оставались в DOM и видимы Lightbox */
+    .hidden-link {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+      clip: rect(1px, 1px, 1px, 1px) !important;
+      clip-path: inset(50%) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  </style>
 </head>
 <body>
   <header class="header" style="background-image: url('images/gallery-header.jpg');">
@@ -28,30 +41,29 @@
         <img src="images/photo1.jpg" alt="Галерея 1: Фото 1" />
       </a>
       <!-- Скрытые фото для Галереи 1 -->
-      <a href="images/photo2-large1.JPG" data-lightbox="gallery1" data-title="Фото 2 (Галерея 1)" style="display:none;"></a>
-      <a href="images/photo3-large1.JPG" data-lightbox="gallery1" data-title="Фото 3 (Галерея 1)" style="display:none;"></a>
+      <a href="images/photo2-large1.jpeg" data-lightbox="gallery1" data-title="Фото 2 (Галерея 1)" class="hidden-link"></a>
+      <a href="images/photo3-large1.jpg" data-lightbox="gallery1" data-title="Фото 3 (Галерея 1)" class="hidden-link"></a>
 
       <!-- ГАЛЕРЕЯ 2 -->
-      <a href="images/photo2-large.jpg" data-lightbox="gallery2" data-title="Описание фото 1 (Галерея 2)">
-        <img src="images/photo2.jpg" alt="Галерея 2: Фото 1" />
+      <a href="images/photo1-large2.jpg" data-lightbox="gallery2" data-title="Описание фото 1 (Галерея 2)">
+        <img src="images/photo1-large2.jpg" alt="Галерея 2: Фото 1" />
       </a>
       <!-- Скрытые фото для Галереи 2 -->
-      <a href="images/photo2-large2.JPG" data-lightbox="gallery2" data-title="Фото 2 (Галерея 2)" style="display:none;"></a>
-      <a href="images/photo3-large2.JPG" data-lightbox="gallery2" data-title="Фото 3 (Галерея 2)" style="display:none;"></a>
+      <a href="images/photo2-large3.JPG" data-lightbox="gallery2" data-title="Фото 2 (Галерея 2)" class="hidden-link"></a>
+      <a href="images/photo3-large3.JPG" data-lightbox="gallery2" data-title="Фото 3 (Галерея 2)" class="hidden-link"></a>
 
       <!-- ГАЛЕРЕЯ 3 -->
       <a href="images/photo3-large.jpg" data-lightbox="gallery3" data-title="Описание фото 1 (Галерея 3)">
         <img src="images/photo3.jpg" alt="Галерея 3: Фото 1" />
       </a>
       <!-- Если для Галереи 3 есть скрытые фото, добавь их сюда с data-lightbox="gallery3" -->
-      <!-- <a href="images/photoX-large3.JPG" data-lightbox="gallery3" data-title="Фото X (Галерея 3)" style="display:none;"></a> -->
-
+      <!-- <a href="images/photoX-large3.JPG" data-lightbox="gallery3" data-title="Фото X (Галерея 3)" class="hidden-link"></a> -->
     </div>
   </div>
 
-  <!-- Подключение локального JS Lightbox -->
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <!-- Подключение JS Lightbox через CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
   <!-- Настройка Lightbox -->
   <script>
