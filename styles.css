@@ -158,6 +158,26 @@ h2 {
     font-size: 14px;
   }
 }
+/* Контейнер с фото на весь экран */
+.photo-overlay {
+  position: fixed; /* фиксируем поверх всего */
+  top: 0;
+  left: 0;
+  width: 100vw; /* 100% ширины экрана */
+  height: 100vh; /* 100% высоты экрана */
+  background-color: rgba(0,0,0,0.9); /* затемнённый фон */
+  display: flex; /* чтобы центрировать фото */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* поверх всего */
+}
+
+/* Фото внутри контейнера */
+.photo-overlay img {
+  max-width: 95vw; /* максимум 95% ширины экрана */
+  max-height: 95vh; /* максимум 95% высоты экрана */
+  object-fit: contain; /* сохраняет пропорции, не обрезая */
+}
 .social-link {
   display: inline-block; /* Позволяет устанавливать ширину, высоту и отступы, сохраняя строку */
   margin: 0 12px;       /* Отступы между иконками */
