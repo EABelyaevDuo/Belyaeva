@@ -106,8 +106,54 @@ h2 {
 }
 
 @media (max-width: 700px) {
-  .header-title { font-size: 2.1rem; }
-  .gallery-grid img { width: 100%; height: auto; }
+  .header {
+    height: 35vh;
+    min-height: 180px;
+    padding: 0;
+  }
+  .header-title {
+    font-size: 1.3rem;
+    padding: 16px 0;
+  }
+  nav {
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0;
+    margin-bottom: 20px;
+  }
+  nav a {
+    display: block;
+    margin: 6px 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .section {
+    margin: 18px 4px;
+    padding: 8px 2vw;
+    font-size: 15px;
+  }
+  .gallery-grid {
+    gap: 8px;
+  }
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+  }
+  .bio-photo {
+    max-height: 180px;
+    margin-bottom: 12px;
+  }
+  .social-icon {
+    width: 28px;
+    height: 28px;
+    margin: 0 6px;
+  }
+  footer {
+    margin: 20px 0 10px;
+    font-size: 14px;
+  }
 }
 .social-link {
   display: inline-block; /* Позволяет устанавливать ширину, высоту и отступы, сохраняя строку */
