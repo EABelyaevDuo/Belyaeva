@@ -111,6 +111,9 @@ h2 {
     min-height: 180px;
     padding: 0;
   }
+  .carousel-item img {
+    max-height: 80vh;
+  }
   .header-title {
     font-size: 1.3rem;
     padding: 16px 0;
